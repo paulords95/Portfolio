@@ -1,34 +1,40 @@
+* {
+  scroll-behavior: smooth;
+  scroll-snap-type: proximity;
+}
+
 .wrap {
   display: flex;
   flex-direction: column;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  height: 100vh;
 }
 
 .App {
   display: flex;
   width: 100%;
-  left: 0;
-  right: 0;
-  position: absolute;
-  top: 0;
-  background-image: linear-gradient(rgb(206, 214, 252), rgb(235, 247, 253));
   height: 100vh;
+  background-image: linear-gradient(rgb(206, 214, 252), rgb(235, 247, 253));
 }
 
 .header {
   display: flex;
   position: relative;
   height: 60px;
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 60px;
 }
 
 .menu {
   display: flex;
-  position: absolute;
+  position: fixed;
   height: 60px;
   width: max-content;
   right: 0;
   margin-right: 10%;
+  z-index: 10;
 }
 
 .menu > ul {
@@ -51,6 +57,10 @@
   color: rgb(87, 80, 80);
 }
 
+.downloadCV:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
 #downloadIcon {
   position: absolute;
   margin-left: 5px;
@@ -91,9 +101,10 @@
 .socialMediaLogos {
   display: flex;
   flex-direction: row;
-  position: absolute;
+  position: fixed;
   right: 10%;
   bottom: 5%;
+  z-index: 10;
 }
 
 .github {
@@ -118,7 +129,6 @@
 
 .projectsContainer {
   position: relative;
-  top: 100vh;
   margin-left: 0px;
 }
 
@@ -126,4 +136,5 @@
   height: 100vh;
   width: 100%;
   background-color: blue;
+  background-image: linear-gradient(rgb(235, 247, 253), rgb(206, 214, 252));
 }
