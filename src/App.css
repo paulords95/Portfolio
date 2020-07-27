@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrap {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  display: flex;
+  width: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  background-image: linear-gradient(rgb(206, 214, 252), rgb(235, 247, 253));
+  height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  display: flex;
+  position: relative;
+  height: 60px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  position: absolute;
+  height: 60px;
+  width: max-content;
+  right: 0;
+  margin-right: 10%;
+}
+
+.menu > ul {
+  display: inline-flex;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.menu > ul > li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.menu > ul > li:hover {
+  cursor: pointer;
+  color: rgb(163, 176, 184);
+}
+.downloadCV {
+  color: rgb(87, 80, 80);
+}
+
+#downloadIcon {
+  position: absolute;
+  margin-left: 5px;
+  width: 7%;
+  margin-top: -5px;
+  color: rgb(87, 80, 80);
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+.name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.name > hr {
+  background-color: black;
+  height: 2px;
+  width: 100%;
+}
+
+.scrollArrow {
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  transform: translateX(-50%);
+}
+
+.scrollArrow:hover {
+  cursor: pointer;
+}
+
+.socialMediaLogos {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+}
+
+.github {
+  height: 40px;
+  width: 50px;
+}
+
+.github:hover {
+  fill: rgb(75, 77, 78);
+  cursor: pointer;
+}
+
+.linkedin {
+  height: 40px;
+  width: 50px;
+}
+
+.linkedin:hover {
+  fill: rgb(75, 77, 78);
+  cursor: pointer;
+}
+
+.projectsContainer {
+  position: relative;
+  top: 100vh;
+  margin-left: 0px;
+}
+
+.projects {
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
 }
