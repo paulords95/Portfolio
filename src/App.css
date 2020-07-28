@@ -100,7 +100,7 @@
   position: fixed;
   left: 47%;
   bottom: 3%;
-  transition: all 1s;
+  transition: all 0.2s;
   z-index: 10;
 }
 
@@ -150,6 +150,15 @@
 .projects {
   height: 100%;
   width: 100%;
+  text-align: center;
   padding-bottom: 50px;
   background-image: linear-gradient(rgb(235, 247, 253), rgb(206, 214, 252));
+}
+
+.projectTitle {
+  position: relative;
+  margin-top: 0px;
+  transform: scaleX(-50%);
+  top: 20px;
+  font-family: "Montserrat", sans-serif;
 }
