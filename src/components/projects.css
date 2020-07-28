@@ -1,0 +1,35 @@
+.projectsWrap {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.projectCard {
+  position: relative;
+
+  width: 450px;
+  height: 600px;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.322);
+  border-radius: 5px;
+}
+
+.projectCard2 {
+  position: relative;
+  margin-top: 20px;
+  width: 450px;
+  height: 600px;
+  background-color: rgba(165, 14, 14, 0.336);
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 900px) {
+  .projectsWrap {
+  }
+}

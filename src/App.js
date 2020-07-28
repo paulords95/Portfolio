@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import downloadIcon from "./imgs/download.svg";
+import Projects from "./components/project.jsx";
 
 function App() {
   const styleHeader = () => {
@@ -17,24 +18,27 @@ function App() {
       document.documentElement.scrollTop > 50
     ) {
       scrollArrow.classList.remove("jump");
-      appHeader.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
-      scrollArrow.style.transform = "rotatex(160deg)";
+      appHeader.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+      scrollArrow.style.opacity = "0";
       menuText.style.color = "white";
       appHeader.style.height = "60px";
       downloadBtn.style.color = "rgb(180, 169, 169)";
       menu.style.marginTop = "5px";
       socialLogos.style.transform = "rotate(90deg)";
+      socialLogos.style.right = "1%";
+      socialLogos.style.bottom = "3%";
       github.style.transform = "rotate(-90deg)";
       linkedin.style.transform = "rotate(-90deg)";
     } else {
-      scrollArrow.classList.add("jump");
       appHeader.style.backgroundColor = "";
       menuText.style.color = "black";
       appHeader.style.height = "100px";
       downloadBtn.style.color = "rgb(87, 80, 80)";
       menu.style.marginTop = "40px";
-      scrollArrow.style.transform = "rotatex(0deg)";
+      scrollArrow.style.opacity = "1";
       socialLogos.style.transform = "rotate(0deg)";
+      socialLogos.style.right = "10%";
+      socialLogos.style.bottom = "5%";
       github.style.transform = "rotate(0deg)";
       linkedin.style.transform = "rotate(0deg)";
     }
@@ -140,7 +144,9 @@ function App() {
         </footer>
       </div>
       <div className="projectsContainer">
-        <div className="projects"></div>
+        <div className="projects">
+          <Projects />
+        </div>
       </div>
     </div>
   );

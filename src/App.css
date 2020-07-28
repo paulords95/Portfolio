@@ -41,7 +41,7 @@
   z-index: 10;
 }
 
-.menu>ul {
+.menu > ul {
   display: inline-flex;
   list-style: none;
   font-family: "Montserrat", sans-serif;
@@ -50,18 +50,17 @@
   z-index: 10;
 }
 
-.menu>ul>li {
+.menu > ul > li {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.menu>ul>li:hover {
+.menu > ul > li:hover {
   cursor: pointer;
   color: rgb(163, 176, 184);
 }
 
 .downloadCV {
-  color: rgb(87, 80, 80);
   transition: all 1s;
 }
 
@@ -91,7 +90,7 @@
   font-weight: 600;
 }
 
-.name>hr {
+.name > hr {
   background-color: black;
   height: 2px;
   width: 100%;
@@ -117,27 +116,29 @@
   bottom: 5%;
   z-index: 10;
   transition: all 1s;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .github {
   height: 40px;
   width: 50px;
-  transition: all 1s;
+  transition: transform 1s;
 }
 
 .github:hover {
-  fill: rgb(75, 77, 78);
+  fill: rgb(149, 160, 165);
   cursor: pointer;
 }
 
 .linkedin {
   height: 40px;
   width: 50px;
-  transition: all 1s;
+  transition: transform 1s;
 }
 
 .linkedin:hover {
-  fill: rgb(75, 77, 78);
+  fill: rgb(149, 160, 165);
   cursor: pointer;
 }
 
@@ -147,8 +148,8 @@
 }
 
 .projects {
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  background-color: blue;
+  padding-bottom: 50px;
   background-image: linear-gradient(rgb(235, 247, 253), rgb(206, 214, 252));
 }
