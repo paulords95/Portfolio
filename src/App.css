@@ -22,9 +22,11 @@
 
 .header {
   display: flex;
-  position: relative;
-  height: 60px;
-  margin-top: 60px;
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  transition: all 1s;
+  z-index: 10;
 }
 
 .menu {
@@ -33,34 +35,41 @@
   height: 60px;
   width: max-content;
   right: 0;
+  margin-top: 40px;
+  transition: all 1s;
   margin-right: 10%;
   z-index: 10;
 }
 
-.menu > ul {
+.menu>ul {
   display: inline-flex;
   list-style: none;
   font-family: "Montserrat", sans-serif;
+  transition: all 1s;
   font-weight: 600;
+  z-index: 10;
 }
 
-.menu > ul > li {
+.menu>ul>li {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.menu > ul > li:hover {
+.menu>ul>li:hover {
   cursor: pointer;
   color: rgb(163, 176, 184);
 }
+
 .downloadCV {
   color: rgb(87, 80, 80);
+  transition: all 1s;
 }
 
 .downloadCV:hover {
   cursor: pointer;
   opacity: 70%;
 }
+
 #downloadIcon {
   position: absolute;
   margin-left: 5px;
@@ -73,25 +82,27 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 10%;
 }
+
 .name {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
 }
 
-.name > hr {
+.name>hr {
   background-color: black;
   height: 2px;
   width: 100%;
 }
 
 .scrollArrow {
-  position: absolute;
-  left: 50%;
-  bottom: 5%;
-  transform: translateX(-50%);
+  position: fixed;
+  left: 47%;
+  bottom: 3%;
+  transition: all 1s;
+  z-index: 10;
 }
 
 .scrollArrow:hover {
@@ -105,11 +116,13 @@
   right: 10%;
   bottom: 5%;
   z-index: 10;
+  transition: all 1s;
 }
 
 .github {
   height: 40px;
   width: 50px;
+  transition: all 1s;
 }
 
 .github:hover {
@@ -120,6 +133,7 @@
 .linkedin {
   height: 40px;
   width: 50px;
+  transition: all 1s;
 }
 
 .linkedin:hover {

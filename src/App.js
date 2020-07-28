@@ -1,10 +1,49 @@
 import React from "react";
 import "./App.css";
 import downloadIcon from "./imgs/download.svg";
-import github from "./imgs/githublogo.svg";
-import linkedin from "./imgs/linkedinlogo.svg";
 
 function App() {
+  const styleHeader = () => {
+    const appHeader = document.querySelector(".header");
+    const menu = document.querySelector(".menu");
+    const menuText = document.querySelector(".menu > ul");
+    const downloadBtn = document.querySelector(".downloadCV");
+    const scrollArrow = document.querySelector(".scrollArrow");
+    const socialLogos = document.querySelector(".socialMediaLogos");
+    const github = document.querySelector(".github");
+    const linkedin = document.querySelector(".linkedin");
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      scrollArrow.classList.remove("jump");
+      appHeader.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+      scrollArrow.style.transform = "rotatex(160deg)";
+      menuText.style.color = "white";
+      appHeader.style.height = "60px";
+      downloadBtn.style.color = "rgb(180, 169, 169)";
+      menu.style.marginTop = "5px";
+      socialLogos.style.transform = "rotate(90deg)";
+      github.style.transform = "rotate(-90deg)";
+      linkedin.style.transform = "rotate(-90deg)";
+    } else {
+      scrollArrow.classList.add("jump");
+      appHeader.style.backgroundColor = "";
+      menuText.style.color = "black";
+      appHeader.style.height = "100px";
+      downloadBtn.style.color = "rgb(87, 80, 80)";
+      menu.style.marginTop = "40px";
+      scrollArrow.style.transform = "rotatex(0deg)";
+      socialLogos.style.transform = "rotate(0deg)";
+      github.style.transform = "rotate(0deg)";
+      linkedin.style.transform = "rotate(0deg)";
+    }
+  };
+
+  window.onscroll = function () {
+    styleHeader();
+  };
+
   return (
     <div className="wrap">
       <div className="App">
@@ -38,7 +77,7 @@ function App() {
               <path
                 d="M31.1716 34.8284C32.7337 36.3905 35.2663 36.3905 36.8284 34.8284L62.2843 9.37259C63.8464 7.81049 63.8464 5.27783 62.2843 3.71573C60.7222 2.15364 58.1895 2.15363 56.6274 3.71573L34 26.3431L11.3726 3.71573C9.81049 2.15363 7.27783 2.15363 5.71573 3.71572C4.15364 5.27782 4.15363 7.81048 5.71573 9.37258L31.1716 34.8284ZM30 29L30 32L38 32L38 29L30 29Z"
                 fill="#FFF3F3"
-                fill-opacity="0.38"
+                fillOpacity="0.38"
               />
             </g>
             <defs>
@@ -49,9 +88,9 @@ function App() {
                 width="66.9117"
                 height="41.4559"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feColorMatrix
                   in="SourceAlpha"
                   type="matrix"
