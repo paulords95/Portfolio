@@ -115,7 +115,7 @@
   right: 10%;
   bottom: 5%;
   z-index: 10;
-  transition: all 1s;
+  transition: opacity 0.01s, right 1s, transform 1s, bottom 1s;
   padding: 10px;
   border-radius: 10px;
 }
@@ -207,4 +207,15 @@
   margin-top: 10px;
   font-weight: 600;
   text-justify: initial;
+}
+
+.footer-logos {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  transform: rotate(90deg);
+  top: 25%;
+  right: 13%;
+  z-index: 500;
+  transition: all 1s;
 }
