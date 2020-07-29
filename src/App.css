@@ -41,7 +41,7 @@
   z-index: 10;
 }
 
-.menu>ul {
+.menu > ul {
   display: inline-flex;
   list-style: none;
   font-family: "Montserrat", sans-serif;
@@ -50,12 +50,12 @@
   z-index: 10;
 }
 
-.menu>ul>li {
+.menu > ul > li {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.menu>ul>li:hover {
+.menu > ul > li:hover {
   cursor: pointer;
   color: rgb(163, 176, 184);
 }
@@ -90,7 +90,7 @@
   font-weight: 600;
 }
 
-.name>hr {
+.name > hr {
   background-color: black;
   height: 2px;
   width: 100%;
@@ -164,7 +164,7 @@
   font-weight: bolder;
 }
 
-.footer>div {
+.footer > div {
   overflow: visible;
   height: 20vh;
   width: 100%;
@@ -178,7 +178,7 @@
   width: 10%;
 }
 
-.footer-info>hr {
+.footer-info > hr {
   position: relative;
   width: 20%;
   top: -15px;
@@ -193,13 +193,17 @@
 }
 
 .info-list {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  left: -10px;
   list-style: none;
   font-size: 17px;
   color: rgb(231, 221, 221);
   font-family: "Montserrat", sans-serif;
 }
 
-.info-list>li {
+.info-list > li {
   margin-top: 10px;
   font-weight: 600;
   text-justify: initial;
