@@ -9,13 +9,7 @@ const CardProject = (props) => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div
-      data-aos="fade-up"
-      data-aos-duration="2000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      className="projectCard"
-    >
+    <div data-aos="fade-up" data-aos-duration="1000" className="projectCard">
       <h1 className="projectTitle">Windows XP</h1>
       <div className="projectPreview"></div>
       <div className="viewWrap">

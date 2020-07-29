@@ -163,3 +163,44 @@
   font-family: "Montserrat", sans-serif;
   font-weight: bolder;
 }
+
+.footer>div {
+  overflow: visible;
+  height: 20vh;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+  background-image: linear-gradient(rgb(134, 155, 248), rgb(66, 122, 150));
+}
+
+.footer-info {
+  position: relative;
+  width: 10%;
+}
+
+.footer-info>hr {
+  position: relative;
+  width: 20%;
+  top: -15px;
+}
+
+.footer-title {
+  margin-top: 0;
+  padding-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  color: rgb(238, 234, 234);
+}
+
+.info-list {
+  list-style: none;
+  font-size: 17px;
+  color: rgb(231, 221, 221);
+  font-family: "Montserrat", sans-serif;
+}
+
+.info-list>li {
+  margin-top: 10px;
+  font-weight: 600;
+  text-justify: initial;
+}
