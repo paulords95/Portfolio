@@ -41,7 +41,7 @@
   z-index: 10;
 }
 
-.menu > ul {
+.menu>ul {
   display: inline-flex;
   list-style: none;
   font-family: "Montserrat", sans-serif;
@@ -50,12 +50,12 @@
   z-index: 10;
 }
 
-.menu > ul > li {
+.menu>ul>li {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.menu > ul > li:hover {
+.menu>ul>li:hover {
   cursor: pointer;
   color: rgb(163, 176, 184);
 }
@@ -90,7 +90,7 @@
   font-weight: 600;
 }
 
-.name > hr {
+.name>hr {
   background-color: black;
   height: 2px;
   width: 100%;
@@ -148,17 +148,18 @@
 }
 
 .projects {
-  height: 100%;
+  height: auto;
   width: 100%;
   text-align: center;
   padding-bottom: 50px;
   background-image: linear-gradient(rgb(235, 247, 253), rgb(206, 214, 252));
 }
 
-.projectTitle {
+.projctTitle {
   position: relative;
   margin-top: 0px;
   transform: scaleX(-50%);
   top: 20px;
   font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
 }

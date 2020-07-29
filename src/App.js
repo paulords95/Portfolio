@@ -145,7 +145,7 @@ function App() {
       </div>
       <div className="projectsContainer">
         <div className="projects">
-          <h1 className="projectTitle">Projetos</h1>
+          <h1 className="projctTitle">Projetos</h1>
           <Projects />
         </div>
       </div>
