@@ -27,7 +27,12 @@ function App() {
       downloadBtn.style.color = "rgb(180, 169, 169)";
       menu.style.marginTop = "5px";
       socialLogos.style.transform = "rotate(90deg)";
-      socialLogos.style.right = "1%";
+      if (window.innerWidth < 600) {
+        console.log(window.innerWidth);
+        socialLogos.style.right = "-7%";
+      } else {
+        socialLogos.style.right = "1%";
+      }
       socialLogos.style.bottom = "3%";
       github.style.transform = "rotate(-90deg)";
       linkedin.style.transform = "rotate(-90deg)";
@@ -39,6 +44,14 @@ function App() {
       menu.style.marginTop = "40px";
       scrollArrow.style.opacity = "1";
       socialLogos.style.transform = "rotate(0deg)";
+
+      if (window.innerWidth < 600) {
+        console.log(window.innerWidth);
+        socialLogos.style.right = "10%";
+      } else {
+        socialLogos.style.right = "10%";
+      }
+
       socialLogos.style.right = "10%";
       socialLogos.style.bottom = "5%";
       github.style.transform = "rotate(0deg)";
@@ -58,6 +71,7 @@ function App() {
     socialLogos.style.height = "50px";
     socialLogos.style.right = "50%";
     socialLogos.style.transform = "translateX(50%)";
+
     github.style.transform = "rotate(0deg)";
     linkedin.style.transform = "rotate(0deg)";
   });
