@@ -15,6 +15,7 @@ function App() {
     const socialLogos = document.querySelector(".socialMediaLogos");
     const github = document.querySelector(".github");
     const linkedin = document.querySelector(".linkedin");
+    const hamburguerMenu = document.querySelector(".burguer-menu");
     if (
       document.body.scrollTop > 50 ||
       document.documentElement.scrollTop > 50
@@ -27,17 +28,21 @@ function App() {
       downloadBtn.style.color = "rgb(180, 169, 169)";
       menu.style.marginTop = "5px";
       socialLogos.style.transform = "rotate(90deg)";
+      hamburguerMenu.style.backgroundColor = "transparent";
       if (window.innerWidth < 600) {
         console.log(window.innerWidth);
         socialLogos.style.right = "-7%";
+        appHeader.style.backgroundColor = "transparent";
       } else {
         socialLogos.style.right = "1%";
+        appHeader.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
       }
       socialLogos.style.bottom = "3%";
       github.style.transform = "rotate(-90deg)";
       linkedin.style.transform = "rotate(-90deg)";
     } else {
       appHeader.style.backgroundColor = "";
+      hamburguerMenu.style.backgroundColor = "transparent";
       menuText.style.color = "black";
       appHeader.style.height = "100px";
       downloadBtn.style.color = "rgb(87, 80, 80)";
@@ -79,7 +84,12 @@ function App() {
     <div className="wrap">
       <div className="App">
         <header className="header">
-          <div className="menu">
+          <div className="burguer-menu">
+            <hr></hr>
+            <hr></hr>
+            <hr></hr>
+          </div>
+          <div className="menu ">
             <ul>
               <li>Projetos</li>
               <li>Contato</li>

@@ -9,3 +9,9 @@
   height: 100%;
   border-radius: 5px;
 }
+
+@media only screen and (max-width: 600px) {
+  .projectsWrap {
+    width: 95%;
+  }
+}
