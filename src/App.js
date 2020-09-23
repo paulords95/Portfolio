@@ -16,17 +16,20 @@ function App() {
     const github = document.querySelector(".github");
     const linkedin = document.querySelector(".linkedin");
     const hamburguerMenu = document.querySelector(".burguer-menu");
+    const burguerWrap = document.querySelector(".burguerMenu-wrap");
     if (
       document.body.scrollTop > 50 ||
       document.documentElement.scrollTop > 50
     ) {
       scrollArrow.classList.remove("jump");
       appHeader.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
+      burguerWrap.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
       scrollArrow.style.opacity = "0";
       menuText.style.color = "white";
       appHeader.style.height = "60px";
       downloadBtn.style.color = "rgb(180, 169, 169)";
       menu.style.marginTop = "5px";
+      hamburguerMenu.style.top = "1%";
       socialLogos.style.transform = "rotate(90deg)";
       hamburguerMenu.style.backgroundColor = "transparent";
       if (window.innerWidth < 600) {
@@ -42,11 +45,13 @@ function App() {
       linkedin.style.transform = "rotate(-90deg)";
     } else {
       appHeader.style.backgroundColor = "";
+      burguerWrap.style.backgroundColor = "";
       hamburguerMenu.style.backgroundColor = "transparent";
       menuText.style.color = "black";
       appHeader.style.height = "100px";
       downloadBtn.style.color = "rgb(87, 80, 80)";
       menu.style.marginTop = "40px";
+      hamburguerMenu.style.top = "4%";
       scrollArrow.style.opacity = "1";
       socialLogos.style.transform = "rotate(0deg)";
 
@@ -84,10 +89,12 @@ function App() {
     <div className="wrap">
       <div className="App">
         <header className="header">
-          <div className="burguer-menu">
-            <hr></hr>
-            <hr></hr>
-            <hr></hr>
+          <div className="burguerMenu-wrap">
+            <div className="burguer-menu">
+              <hr></hr>
+              <hr></hr>
+              <hr></hr>
+            </div>
           </div>
           <div className="menu ">
             <ul>

@@ -235,17 +235,31 @@
   }
 }
 
+.burguerMenu-wrap {
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  height: 60px;
+  z-index: 5;
+  opacity: 0;
+  transition: all 1.5s;
+}
+
 .burguer-menu {
-  position: absolute;
+  position: fixed;
   width: 50px;
   height: 50px;
-  right: 5%;
-  top: 40%;
+  right: 3%;
+  top: 4%;
   z-index: 10;
   opacity: 0;
   transform: rotate(90deg);
   transition: all 0.4s;
   border-radius: 5px;
+}
+
+.burguer-menu:hover {
+  cursor: pointer;
 }
 
 .burguer-menu > hr {
@@ -268,6 +282,9 @@
     transform: rotate(0deg);
   }
 
+  .burguerMenu-wrap {
+    opacity: 1;
+  }
   .header {
     position: absolute;
   }
