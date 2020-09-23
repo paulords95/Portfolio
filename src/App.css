@@ -170,10 +170,7 @@
   width: 100%;
   text-align: center;
   padding-bottom: 50px;
-  background-image: linear-gradient(
-    rgba(94, 104, 243, 0.534),
-    rgb(83, 56, 134)
-  );
+  background-image: linear-gradient(rgb(58, 50, 95), rgb(45, 45, 126));
 }
 
 .footer-info {
