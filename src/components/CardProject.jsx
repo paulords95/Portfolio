@@ -8,12 +8,28 @@ const CardProject = (props) => {
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
+  useEffect(() => {
+    const preview = document.querySelector(".projectPreview");
+    preview.style.backgroundImage = `url(${props.bgImg})`;
+  }, [props.bgImg]);
   return (
     <div data-aos="fade-up" data-aos-duration="1000" className="projectCard">
-      <h1 className="projectTitle">Windows XP</h1>
-      <div className="projectPreview"></div>
+      <h1 className="projectTitle">{props.title}</h1>
+      <div
+        className="projectPreview"
+        onClick={() => {
+          let url = props.liveLink;
+          const win = window.open(url, "_blank");
+          win.focus();
+        }}
+      ></div>
       <div className="viewWrap">
         <svg
+          onClick={() => {
+            let url = props.liveLink;
+            const win = window.open(url, "_blank");
+            win.focus();
+          }}
           className="liveView"
           version="1.1"
           id="Capa_1"
@@ -56,6 +72,11 @@ const CardProject = (props) => {
           <g></g>
         </svg>
         <svg
+          onClick={() => {
+            let url = props.repoLink;
+            const win = window.open(url, "_blank");
+            win.focus();
+          }}
           className="githubLogo"
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -66,15 +87,15 @@ const CardProject = (props) => {
         </svg>
       </div>
       <div className="projectDescription">
-        <p>Funcionalidades básicas do Windows XP desenvolvidas em React</p>
+        <p>{props.description}</p>
         <ul>
           <li>
             <h1>Funcionalidades</h1>
           </li>
-          <li>Menu Iniciar</li>
-          <li>Relógio</li>
-          <li>Paint</li>
-          <li>Bloco de Notas</li>
+          <li>{props.func1}</li>
+          <li>{props.func2}</li>
+          <li>{props.func3}</li>
+          <li>{props.func4}</li>
         </ul>
       </div>
     </div>
