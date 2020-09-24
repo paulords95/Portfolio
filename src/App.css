@@ -164,9 +164,9 @@
   font-weight: bolder;
 }
 
-/*.nav-item > .active {
+.nav-item > .active {
   border-bottom: 2px solid #333;
-}*/
+}
 
 .scroll-top {
   position: fixed;
