@@ -5,10 +5,10 @@ import Projects from "./components/project.jsx";
 import { useBottomScrollListener } from "react-bottom-scroll-listener";
 import { Link, animateScroll as scroll } from "react-scroll";
 import Footer from "./components/Footer";
+import Skills from "./components/Skills";
 
 function App() {
   const styleHeader = () => {
-    console.log(document.documentElement.scrollTop);
     const appHeader = document.querySelector(".header");
     const menu = document.querySelector(".menu");
     const menuText = document.querySelector(".menu > ul");
@@ -37,7 +37,6 @@ function App() {
       socialLogos.style.transform = "rotate(90deg)";
       hamburguerMenu.style.backgroundColor = "transparent";
       if (window.innerWidth < 600) {
-        console.log(window.innerWidth);
         socialLogos.style.right = "-7%";
         appHeader.style.backgroundColor = "transparent";
       } else {
@@ -61,7 +60,6 @@ function App() {
       socialLogos.style.transform = "rotate(0deg)";
 
       if (window.innerWidth < 600) {
-        console.log(window.innerWidth);
         socialLogos.style.right = "10%";
       } else {
         socialLogos.style.right = "10%";
@@ -118,15 +116,16 @@ function App() {
               <li className="nav-item">
                 <Link
                   activeClass="active"
-                  to="footerSection"
+                  to="about-section"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={300}
                 >
-                  Contato
+                  Sobre/Contato
                 </Link>
               </li>
+
               <li
                 className="downloadCV"
                 onClick={() => {
@@ -232,7 +231,9 @@ function App() {
           </div>
         </section>
       </div>
+
       <Projects />
+      <Skills />
       <Footer />
       <div>
         <svg

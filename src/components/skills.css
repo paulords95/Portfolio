@@ -1,0 +1,38 @@
+.about {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -250px;
+  height: 100vh;
+  flex-direction: column;
+  background-image: linear-gradient(rgb(208, 216, 250), rgb(197, 205, 247));
+}
+
+.about > h1 {
+  position: relative;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+}
+
+.about-me {
+  position: relative;
+  margin-left: 10%;
+  color: rgb(53, 48, 48);
+  margin-right: 10%;
+  text-indent: 2em;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.skills {
+  position: relative;
+  top: 7%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 22px;
+  margin: 0 auto;
+}
