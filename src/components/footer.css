@@ -1,0 +1,55 @@
+.footer > div {
+  overflow: visible;
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+  background-image: linear-gradient(rgb(141, 126, 212), rgb(68, 68, 151));
+}
+
+.footer-info {
+  position: relative;
+  width: 10%;
+}
+
+.footer-info > hr {
+  position: relative;
+  width: 20%;
+  top: -15px;
+}
+
+.footer-title {
+  margin-top: 0;
+  padding-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 35px;
+  color: rgb(238, 234, 234);
+}
+
+.info-list {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  left: -10px;
+  list-style: none;
+  font-size: 17px;
+  color: rgb(231, 221, 221);
+  font-family: "Montserrat", sans-serif;
+}
+
+.info-list > li {
+  margin-top: 10px;
+  font-weight: 600;
+  text-justify: initial;
+}
+
+.footer-logos {
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  transform: rotate(90deg);
+  top: 25%;
+  right: 13%;
+  z-index: 500;
+  transition: all 1s;
+}

@@ -3,6 +3,8 @@ import "./App.css";
 import downloadIcon from "./imgs/download.svg";
 import Projects from "./components/project.jsx";
 import { useBottomScrollListener } from "react-bottom-scroll-listener";
+import { Link, animateScroll as scroll } from "react-scroll";
+import Footer from "./components/Footer";
 
 function App() {
   const styleHeader = () => {
@@ -17,6 +19,7 @@ function App() {
     const linkedin = document.querySelector(".linkedin");
     const hamburguerMenu = document.querySelector(".burguer-menu");
     const burguerWrap = document.querySelector(".burguerMenu-wrap");
+    const scrollTop = document.querySelector(".scroll-top");
     if (
       document.body.scrollTop > 50 ||
       document.documentElement.scrollTop > 50
@@ -25,6 +28,7 @@ function App() {
       appHeader.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
       burguerWrap.style.backgroundColor = "rgba(0, 0, 0, 0.4)";
       scrollArrow.style.opacity = "0";
+      scrollTop.style.opacity = "1";
       menuText.style.color = "white";
       appHeader.style.height = "60px";
       downloadBtn.style.color = "rgb(180, 169, 169)";
@@ -53,6 +57,7 @@ function App() {
       menu.style.marginTop = "40px";
       hamburguerMenu.style.top = "4%";
       scrollArrow.style.opacity = "1";
+      scrollTop.style.opacity = "0";
       socialLogos.style.transform = "rotate(0deg)";
 
       if (window.innerWidth < 600) {
@@ -98,8 +103,30 @@ function App() {
           </div>
           <div className="menu ">
             <ul>
-              <li>Projetos</li>
-              <li>Contato</li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="projectSection"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={300}
+                >
+                  Projetos
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  activeClass="active"
+                  to="footerSection"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={300}
+                >
+                  Contato
+                </Link>
+              </li>
               <li
                 className="downloadCV"
                 onClick={() => {
@@ -205,23 +232,64 @@ function App() {
           </div>
         </section>
       </div>
-      <div className="projectsContainer">
-        <div className="projects">
-          <h1 className="projctTitle">Projetos</h1>
-          <Projects />
-        </div>
+      <Projects />
+      <Footer />
+      <div>
+        <svg
+          className="scroll-top"
+          onClick={() => {
+            scroll.scrollToTop();
+          }}
+          width="68"
+          height="42"
+          viewBox="0 0 68 42"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g filter="url(#filter0_d)">
+            <path
+              d="M31.1716 34.8284C32.7337 36.3905 35.2663 36.3905 36.8284 34.8284L62.2843 9.37259C63.8464 7.81049 63.8464 5.27783 62.2843 3.71573C60.7222 2.15364 58.1895 2.15363 56.6274 3.71573L34 26.3431L11.3726 3.71573C9.81049 2.15363 7.27783 2.15363 5.71573 3.71572C4.15364 5.27782 4.15363 7.81048 5.71573 9.37258L31.1716 34.8284ZM30 29L30 32L38 32L38 29L30 29Z"
+              fill="#FFF3F3"
+              fillOpacity="0.38"
+            />
+          </g>
+          <defs>
+            <filter
+              id="filter0_d"
+              x="0.544155"
+              y="0.544151"
+              width="66.9117"
+              height="41.4559"
+              filterUnits="userSpaceOnUse"
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              />
+              <feOffset dy="2" />
+              <feGaussianBlur stdDeviation="2" />
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+              />
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow"
+              />
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow"
+                result="shape"
+              />
+            </filter>
+          </defs>
+        </svg>
       </div>
-      <footer className="footer">
-        <div className="footer-info">
-          <h1 className="footer-title">Contato</h1>
-          <hr></hr>
-          <ul className="info-list">
-            <li>E-mail: paulords95@gmail.com</li>
-            <li>Tel.: (41) 99636-7447</li>
-          </ul>
-          <div className="footer-logos"></div>
-        </div>
-      </footer>
     </div>
   );
 }
