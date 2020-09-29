@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import downloadIcon from "./imgs/download.svg";
 import Projects from "./components/project.jsx";
@@ -73,7 +73,14 @@ function App() {
   };
 
   window.onscroll = function () {
+    const burguerMenu = document.querySelector(".burguer-menu");
+    const burguerMenuItens = document.querySelector(".showMenu");
+    const burguerMenuList = document.querySelector(".showMenu > ul");
     styleHeader();
+    if (menuClick === true) {
+      burguerMenuItens.style.height = "0";
+      burguerMenuList.style.opacity = "0";
+    }
   };
 
   useBottomScrollListener(() => {
@@ -88,15 +95,122 @@ function App() {
     github.style.transform = "rotate(0deg)";
     linkedin.style.transform = "rotate(0deg)";
   });
+
+  const [menuClick, setMenuClick] = useState(false);
+  const showBurguerMenu = () => {
+    const burguerMenu = document.querySelector(".burguer-menu");
+    const burguerMenuLineLast = document.querySelector(
+      ".burguer-menu > hr:nth-last-child(1)"
+    );
+    const burguerMenuLine = document.querySelector(
+      ".burguer-menu > hr:nth-last-child(2)"
+    );
+    const burguerMenuLineTwo = document.querySelector(
+      ".burguer-menu > hr:nth-last-child(3)"
+    );
+    const burguerMenuItens = document.querySelector(".showMenu");
+    const burguerMenuList = document.querySelector(".showMenu > ul");
+
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      if (menuClick === false) {
+        setMenuClick(true);
+        burguerMenuItens.style.height = "160px";
+        burguerMenuList.style.opacity = "1";
+        burguerMenu.style.transform = "rotate(90deg)";
+        burguerMenuLineLast.style.opacity = "0";
+        burguerMenuLine.style.position = "absolute";
+        burguerMenuLineTwo.style.position = "absolute";
+        burguerMenuLine.style.transform = "rotate(45deg)";
+        burguerMenuLineTwo.style.transform = "rotate(-45deg)";
+      }
+      if (menuClick === true) {
+        setMenuClick(false);
+        burguerMenuItens.style.height = "0";
+        burguerMenuList.style.opacity = "0";
+        burguerMenu.style.transform = "rotate(0deg)";
+        burguerMenuLineLast.style.opacity = "1";
+        burguerMenuLine.style.position = "relative";
+        burguerMenuLineTwo.style.position = "relative";
+        burguerMenuLine.style.transform = "rotate(0deg)";
+        burguerMenuLineTwo.style.transform = "rotate(0deg)";
+      }
+    } else {
+      if (menuClick === false) {
+        setMenuClick(true);
+        burguerMenu.style.top = "1%";
+        burguerMenuItens.style.height = "200px";
+        burguerMenuItens.style.top = "0";
+        burguerMenuList.style.marginTop = "60px";
+        burguerMenuList.style.opacity = "1";
+      }
+      if (menuClick === true) {
+        setMenuClick(false);
+        burguerMenu.style.top = "4%";
+        burguerMenuItens.style.height = "0px";
+        burguerMenuItens.style.top = "0";
+        burguerMenuList.style.marginTop = "60px";
+        burguerMenuList.style.opacity = "0";
+      }
+    }
+  };
+
   return (
     <div className="wrap">
       <div className="App">
         <header className="header">
           <div className="burguerMenu-wrap">
-            <div className="burguer-menu">
+            <div className="burguer-menu" onClick={showBurguerMenu}>
               <hr></hr>
               <hr></hr>
               <hr></hr>
+            </div>
+            <div className="showMenu">
+              <ul>
+                <li className="nav-item">
+                  <Link
+                    activeClass="active"
+                    to="projectSection"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={300}
+                  >
+                    Projetos
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    activeClass="active"
+                    to="about-section"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={300}
+                  >
+                    Sobre/Contato
+                  </Link>
+                </li>
+
+                <li
+                  className="downloadCVBurguer"
+                  onClick={() => {
+                    let url =
+                      "https://github.com/paulords95/resume/raw/master/Paulo%20Ricardo%20da%20Silva%20CV.pdf";
+                    const win = window.open(url);
+                    win.focus();
+                  }}
+                >
+                  Download CV
+                  <img
+                    alt="Download"
+                    id="downloadIcon"
+                    src={downloadIcon}
+                  ></img>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="menu ">
