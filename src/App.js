@@ -74,12 +74,29 @@ function App() {
 
   window.onscroll = function () {
     const burguerMenu = document.querySelector(".burguer-menu");
-    const burguerMenuItens = document.querySelector(".showMenu");
+    const burguerMenuLineTwo = document.querySelector(
+      ".burguer-menu > hr:nth-last-child(1)"
+    );
+    const burguerMenuLine = document.querySelector(
+      ".burguer-menu > hr:nth-last-child(2)"
+    );
+    const burguerMenuLineLast = document.querySelector(
+      ".burguer-menu > hr:nth-last-child(3)"
+    );
     const burguerMenuList = document.querySelector(".showMenu > ul");
+    const burguerMenuItens = document.querySelector(".showMenu");
     styleHeader();
     if (menuClick === true) {
       burguerMenuItens.style.height = "0";
       burguerMenuList.style.opacity = "0";
+      burguerMenu.style.transform = "rotate(0deg)";
+      burguerMenuLineLast.style.opacity = "1";
+      burguerMenuLine.style.position = "relative";
+      burguerMenuLineTwo.style.position = "relative";
+      burguerMenuLine.style.transform = "rotate(0deg)";
+      burguerMenuLineTwo.style.transform = "rotate(0deg)";
+      burguerMenuItens.style.top = "60px";
+      burguerMenuList.style.marginTop = "0px";
     }
   };
 
@@ -99,13 +116,13 @@ function App() {
   const [menuClick, setMenuClick] = useState(false);
   const showBurguerMenu = () => {
     const burguerMenu = document.querySelector(".burguer-menu");
-    const burguerMenuLineLast = document.querySelector(
+    const burguerMenuLineTwo = document.querySelector(
       ".burguer-menu > hr:nth-last-child(1)"
     );
     const burguerMenuLine = document.querySelector(
       ".burguer-menu > hr:nth-last-child(2)"
     );
-    const burguerMenuLineTwo = document.querySelector(
+    const burguerMenuLineLast = document.querySelector(
       ".burguer-menu > hr:nth-last-child(3)"
     );
     const burguerMenuItens = document.querySelector(".showMenu");
@@ -145,14 +162,26 @@ function App() {
         burguerMenuItens.style.top = "0";
         burguerMenuList.style.marginTop = "60px";
         burguerMenuList.style.opacity = "1";
+        burguerMenu.style.transform = "rotate(90deg)";
+        burguerMenuLineLast.style.opacity = "0";
+        burguerMenuLine.style.position = "absolute";
+        burguerMenuLineTwo.style.position = "absolute";
+        burguerMenuLine.style.transform = "rotate(45deg)";
+        burguerMenuLineTwo.style.transform = "rotate(-45deg)";
       }
       if (menuClick === true) {
         setMenuClick(false);
         burguerMenu.style.top = "4%";
         burguerMenuItens.style.height = "0px";
-        burguerMenuItens.style.top = "0";
-        burguerMenuList.style.marginTop = "60px";
+        burguerMenuItens.style.top = "60px";
+        burguerMenuList.style.marginTop = "0px";
         burguerMenuList.style.opacity = "0";
+        burguerMenu.style.transform = "rotate(0deg)";
+        burguerMenuLineLast.style.opacity = "1";
+        burguerMenuLine.style.position = "relative";
+        burguerMenuLineTwo.style.position = "relative";
+        burguerMenuLine.style.transform = "rotate(0deg)";
+        burguerMenuLineTwo.style.transform = "rotate(0deg)";
       }
     }
   };
