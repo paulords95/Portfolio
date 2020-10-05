@@ -68,15 +68,17 @@
 }
 
 .projectDescription > p {
-  width: 70%;
-  margin: 10px auto;
+  width: 95%;
+  margin: 5px auto;
+  text-align: justify;
   font-family: "Montserrat", sans-serif;
+  text-indent: 2em;
 }
 
 .projectDescription > ul {
   position: relative;
   padding-top: 10px;
-  top: 50px;
+  top: 20px;
   list-style: none;
   text-align: justify;
   font-family: "Montserrat", sans-serif;
