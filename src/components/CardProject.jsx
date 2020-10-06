@@ -22,6 +22,12 @@ const CardProject = (props) => {
           const win = window.open(url, "_blank");
           win.focus();
         }}
+        onMouseOver={() => {
+          document.querySelector(".projectPreview").style.opacity = "1";
+        }}
+        onMouseLeave={() => {
+          document.querySelector(".projectPreview").style.opacity = "0.6";
+        }}
       ></div>
       <div className="viewWrap">
         <svg
