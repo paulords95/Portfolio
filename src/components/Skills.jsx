@@ -23,7 +23,6 @@ const Skills = () => {
           Possuo também familiaridade com as tecnologias React Native, Node.js,
           mongoDB e linguagem SQL.
         </p>
-        {/* <h2 className="skills">Minhas Habilidades</h2>*/}
       </section>
     </div>
   );
