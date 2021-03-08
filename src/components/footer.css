@@ -4,6 +4,7 @@
   width: 100%;
   text-align: center;
   padding-bottom: 50px;
+  padding-top: 30px;
   background-image: linear-gradient(rgb(62, 143, 184), rgb(103, 111, 179));
 }
 
@@ -61,5 +62,5 @@
   color: rgb(190, 190, 190);
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
-  top: 60px;
+  top: 100px;
 }
