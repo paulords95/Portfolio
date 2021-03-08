@@ -98,6 +98,7 @@ function App() {
       burguerMenuLineTwo.style.transform = "rotate(0deg)";
       burguerMenuItens.style.top = "60px";
       burguerMenuList.style.marginTop = "0px";
+      setMenuClick(false);
     }
   };
 
@@ -128,6 +129,7 @@ function App() {
     );
     const burguerMenuItens = document.querySelector(".showMenu");
     const burguerMenuList = document.querySelector(".showMenu > ul");
+    const burguerWrap = document.querySelector(".burguerMenu-wrap");
 
     if (
       document.body.scrollTop > 50 ||
@@ -135,7 +137,8 @@ function App() {
     ) {
       if (menuClick === false) {
         setMenuClick(true);
-        burguerMenuItens.style.height = "160px";
+        burguerMenuItens.style.height = "100vh";
+        burguerWrap.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
         burguerMenuList.style.opacity = "1";
         burguerMenu.style.transform = "rotate(90deg)";
         burguerMenuLineLast.style.opacity = "0";
@@ -158,7 +161,7 @@ function App() {
     } else {
       if (menuClick === false) {
         setMenuClick(true);
-        burguerMenu.style.top = "1%";
+        burguerMenu.style.top = "1px";
         burguerMenuItens.style.height = "200px";
         burguerMenuItens.style.top = "0";
         burguerMenuList.style.marginTop = "60px";
@@ -172,7 +175,7 @@ function App() {
       }
       if (menuClick === true) {
         setMenuClick(false);
-        burguerMenu.style.top = "4%";
+        burguerMenu.style.top = "5px";
         burguerMenuItens.style.height = "0px";
         burguerMenuItens.style.top = "60px";
         burguerMenuList.style.marginTop = "0px";

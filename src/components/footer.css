@@ -15,8 +15,9 @@
 .footer-info > hr {
   position: relative;
   width: 20%;
-  top: -25px;
-  border-color: rgb(187, 186, 186);
+  top: -16px;
+  border-color: rgb(201, 194, 194);
+  color: rgb(201, 194, 194);
 }
 
 .footer-title {
