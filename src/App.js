@@ -6,6 +6,7 @@ import { useBottomScrollListener } from "react-bottom-scroll-listener";
 import { Link, animateScroll as scroll } from "react-scroll";
 import Footer from "./components/Footer";
 import Skills from "./components/Skills";
+import { useEffect } from "react";
 
 function App() {
   const styleHeader = () => {
@@ -185,6 +186,13 @@ function App() {
       }
     }
   };
+
+  useEffect(() => {
+    const nameItem = document.querySelector(".name");
+    const menu = document.querySelector(".menu");
+    nameItem.style.left = "10%";
+    menu.style.marginTop = "40px";
+  }, []);
 
   return (
     <div className="wrap">

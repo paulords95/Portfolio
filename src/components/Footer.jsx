@@ -9,10 +9,11 @@ const Footer = () => {
         <h1 className="footer-title">Contato</h1>
         <hr></hr>
         <ul className="info-list">
-          <li>E-mail: paulords95@gmail.com</li>
-          <li>Tel.: (41) 99636-7447</li>
+          <li>contato@paulo.dev.br</li>
         </ul>
+        <hr style={{ marginTop: 35 }}></hr>
         <div className="footer-logos"></div>
+        <h1 className="year">2021</h1>
       </div>
     </footer>
   );

@@ -15,7 +15,8 @@
 .footer-info > hr {
   position: relative;
   width: 20%;
-  top: -15px;
+  top: -25px;
+  border-color: rgb(187, 186, 186);
 }
 
 .footer-title {
@@ -30,7 +31,7 @@
   position: relative;
   width: 80%;
   margin: 0 auto;
-  left: -10px;
+  left: -20px;
   list-style: none;
   font-size: 17px;
   color: rgb(231, 221, 221);
@@ -52,4 +53,12 @@
   right: 13%;
   z-index: 500;
   transition: all 1s;
+}
+
+.year {
+  position: relative;
+  color: rgb(190, 190, 190);
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  top: 60px;
 }
