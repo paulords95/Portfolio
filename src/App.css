@@ -204,7 +204,7 @@
   width: 50px;
   height: 68px;
   right: 3%;
-  top: 7%;
+  top: 2%;
   z-index: 15;
   opacity: 0;
   transform: rotate(90deg);
@@ -225,7 +225,10 @@
   height: 5px;
   border-radius: 2px;
   z-index: 10;
-  transition: all 1s;
+  transition: transform 0.5s;
+}
+.burguer-menu > hr:nth-last-child(3) {
+  transition: transform 0.1s !important;
 }
 
 @media only screen and (max-width: 600px) {

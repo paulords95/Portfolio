@@ -96,6 +96,8 @@ function App() {
       burguerMenuLineTwo.style.position = "relative";
       burguerMenuLine.style.transform = "rotate(0deg)";
       burguerMenuLineTwo.style.transform = "rotate(0deg)";
+      burguerMenuLine.style.backgroundColor = "black";
+      burguerMenuLineTwo.style.backgroundColor = "black";
       burguerMenuItens.style.top = "60px";
       burguerMenuList.style.marginTop = "0px";
       setMenuClick(false);
@@ -142,6 +144,8 @@ function App() {
         burguerMenuList.style.opacity = "1";
         burguerMenu.style.transform = "rotate(90deg)";
         burguerMenuLineLast.style.opacity = "0";
+        burguerMenuLine.style.backgroundColor = "white";
+        burguerMenuLineTwo.style.backgroundColor = "white";
         burguerMenuLine.style.position = "absolute";
         burguerMenuLineTwo.style.position = "absolute";
         burguerMenuLine.style.transform = "rotate(45deg)";
@@ -153,6 +157,8 @@ function App() {
         burguerMenuList.style.opacity = "0";
         burguerMenu.style.transform = "rotate(0deg)";
         burguerMenuLineLast.style.opacity = "1";
+        burguerMenuLine.style.backgroundColor = "black";
+        burguerMenuLineTwo.style.backgroundColor = "black";
         burguerMenuLine.style.position = "relative";
         burguerMenuLineTwo.style.position = "relative";
         burguerMenuLine.style.transform = "rotate(0deg)";
@@ -161,13 +167,15 @@ function App() {
     } else {
       if (menuClick === false) {
         setMenuClick(true);
-        burguerMenu.style.top = "1px";
+
         burguerMenuItens.style.height = "200px";
         burguerMenuItens.style.top = "0";
         burguerMenuList.style.marginTop = "60px";
         burguerMenuList.style.opacity = "1";
         burguerMenu.style.transform = "rotate(90deg)";
         burguerMenuLineLast.style.opacity = "0";
+        burguerMenuLine.style.backgroundColor = "white";
+        burguerMenuLineTwo.style.backgroundColor = "white";
         burguerMenuLine.style.position = "absolute";
         burguerMenuLineTwo.style.position = "absolute";
         burguerMenuLine.style.transform = "rotate(45deg)";
@@ -175,11 +183,12 @@ function App() {
       }
       if (menuClick === true) {
         setMenuClick(false);
-        burguerMenu.style.top = "5px";
         burguerMenuItens.style.height = "0px";
         burguerMenuItens.style.top = "60px";
         burguerMenuList.style.marginTop = "0px";
         burguerMenuList.style.opacity = "0";
+        burguerMenuLine.style.backgroundColor = "black";
+        burguerMenuLineTwo.style.backgroundColor = "black";
         burguerMenu.style.transform = "rotate(0deg)";
         burguerMenuLineLast.style.opacity = "1";
         burguerMenuLine.style.position = "relative";
