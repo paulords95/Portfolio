@@ -258,7 +258,7 @@
     top: 60px;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
-    transition: height 1s;
+    transition: all 1s;
     align-items: center;
   }
   .showMenu > ul {

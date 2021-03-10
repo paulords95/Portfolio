@@ -150,6 +150,11 @@ function App() {
         burguerMenuLineTwo.style.position = "absolute";
         burguerMenuLine.style.transform = "rotate(45deg)";
         burguerMenuLineTwo.style.transform = "rotate(-45deg)";
+        setTimeout(() => {
+          burguerMenu.style.transition = "all 1s";
+          burguerMenu.style.opacity = "1";
+        }, 800);
+        burguerMenu.style.transition = "all 0s";
       }
       if (menuClick === true) {
         setMenuClick(false);
@@ -168,6 +173,7 @@ function App() {
           burguerMenu.style.transition = "all 1s";
           burguerMenu.style.opacity = "1";
         }, 800);
+        burguerMenu.style.transition = "all 0s";
       }
     } else {
       if (menuClick === false) {
@@ -175,7 +181,7 @@ function App() {
         burguerMenu.style.opacity = "0";
 
         burguerMenuItens.style.height = "200px";
-        burguerMenuItens.style.top = "0";
+        burguerMenuItens.style.top = "0px";
         burguerMenuList.style.marginTop = "60px";
         burguerMenuList.style.opacity = "1";
         burguerMenu.style.transform = "rotate(90deg)";
@@ -190,6 +196,7 @@ function App() {
           burguerMenu.style.transition = "all 1s";
           burguerMenu.style.opacity = "1";
         }, 800);
+        burguerMenu.style.transition = "all 0s";
       }
       if (menuClick === true) {
         setMenuClick(false);
@@ -211,6 +218,7 @@ function App() {
           burguerMenu.style.transition = "all 1s";
           burguerMenu.style.opacity = "1";
         }, 800);
+        burguerMenu.style.transition = "all 0s";
       }
     }
   };
