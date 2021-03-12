@@ -34,7 +34,6 @@ function App() {
       appHeader.style.height = "60px";
       downloadBtn.style.color = "rgb(180, 169, 169)";
       menu.style.marginTop = "5px";
-      hamburguerMenu.style.top = "1%";
       socialLogos.style.transform = "rotate(90deg)";
       hamburguerMenu.style.backgroundColor = "transparent";
       if (window.innerWidth < 600) {
@@ -55,7 +54,7 @@ function App() {
       appHeader.style.height = "100px";
       downloadBtn.style.color = "rgb(87, 80, 80)";
       menu.style.marginTop = "40px";
-      hamburguerMenu.style.top = "4%";
+      hamburguerMenu.style.top = "1%";
       scrollArrow.style.opacity = "1";
       scrollTop.style.opacity = "0";
       socialLogos.style.transform = "rotate(0deg)";
@@ -88,7 +87,7 @@ function App() {
     const burguerMenuItens = document.querySelector(".showMenu");
     styleHeader();
     if (menuClick === true) {
-      burguerMenuItens.style.height = "0";
+      burguerMenuItens.style.top = "0";
       burguerMenuList.style.opacity = "0";
       burguerMenu.style.transform = "rotate(0deg)";
       burguerMenuLineLast.style.opacity = "1";
@@ -98,9 +97,13 @@ function App() {
       burguerMenuLineTwo.style.transform = "rotate(0deg)";
       burguerMenuLine.style.backgroundColor = "black";
       burguerMenuLineTwo.style.backgroundColor = "black";
-      burguerMenuItens.style.top = "60px";
       burguerMenuList.style.marginTop = "0px";
       setMenuClick(false);
+      setTimeout(() => {
+        burguerMenu.style.transition = "all 1s";
+        burguerMenu.style.opacity = "1";
+      }, 800);
+      burguerMenu.style.transition = "all 0s";
     }
   };
 
@@ -139,7 +142,7 @@ function App() {
     ) {
       if (menuClick === false) {
         setMenuClick(true);
-        burguerMenuItens.style.height = "100vh";
+        burguerMenuItens.style.top = "100vh";
         burguerWrap.style.backgroundColor = "rgba(0, 0, 0, 0.7)";
         burguerMenuList.style.opacity = "1";
         burguerMenu.style.transform = "rotate(90deg)";
@@ -159,7 +162,7 @@ function App() {
       if (menuClick === true) {
         setMenuClick(false);
         burguerMenu.style.opacity = "0";
-        burguerMenuItens.style.height = "0";
+        burguerMenuItens.style.top = "0";
         burguerMenuList.style.opacity = "0";
         burguerMenu.style.transform = "rotate(0deg)";
         burguerMenuLineLast.style.opacity = "1";
@@ -179,10 +182,7 @@ function App() {
       if (menuClick === false) {
         setMenuClick(true);
         burguerMenu.style.opacity = "0";
-
-        burguerMenuItens.style.height = "200px";
-        burguerMenuItens.style.top = "0px";
-        burguerMenuList.style.marginTop = "60px";
+        burguerMenuItens.style.top = "200px";
         burguerMenuList.style.opacity = "1";
         burguerMenu.style.transform = "rotate(90deg)";
         burguerMenuLineLast.style.opacity = "0";
@@ -201,10 +201,8 @@ function App() {
       if (menuClick === true) {
         setMenuClick(false);
         burguerMenu.style.opacity = "0";
-        burguerMenuItens.style.height = "0px";
-        burguerMenuItens.style.top = "60px";
+        burguerMenuItens.style.top = "0px";
         burguerMenu.style.marginLeft = "2px";
-        burguerMenuList.style.marginTop = "0px";
         burguerMenuList.style.opacity = "0";
         burguerMenuLine.style.backgroundColor = "black";
         burguerMenuLineTwo.style.backgroundColor = "black";

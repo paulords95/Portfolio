@@ -223,7 +223,7 @@
   background-color: black;
   border: none;
   height: 5px;
-  border-radius: 2px;
+  border-radius: 5px;
   z-index: 10;
   transition: transform 0.1s;
 }
@@ -253,11 +253,12 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    height: 0px;
+    height: 100vh;
     width: 100%;
     top: 60px;
     right: 0;
     background: rgba(0, 0, 0, 0.7);
+    transform-origin: 20% 40%;
     transition: all 1s;
     align-items: center;
   }
@@ -270,6 +271,7 @@
     opacity: 0;
     color: rgb(223, 223, 223);
     margin: 0 auto;
+    margin-top: 30px;
   }
 
   .showMenu > ul > li {
